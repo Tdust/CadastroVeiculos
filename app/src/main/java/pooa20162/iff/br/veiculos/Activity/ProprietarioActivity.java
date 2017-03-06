@@ -10,6 +10,6 @@ public class ProprietarioActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lista_proprietarios);
+        setContentView(R.layout.activity_proprietario);
     }
 }
