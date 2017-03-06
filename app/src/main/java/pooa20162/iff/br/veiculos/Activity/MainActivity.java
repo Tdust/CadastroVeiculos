@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void chamaTelaProprietarios(View v){
-        Intent intent = new Intent(MainActivity.this, ListaProprietarioActiity.class);
+        Intent intent = new Intent(MainActivity.this, ListaProprietarioActivity.class);
         startActivity(intent);
     }
     private Context getContext(){
