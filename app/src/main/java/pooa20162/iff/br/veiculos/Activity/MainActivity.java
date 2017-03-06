@@ -1,7 +1,10 @@
 package pooa20162.iff.br.veiculos.Activity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import pooa20162.iff.br.veiculos.R;
 
@@ -11,5 +14,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+    public void chamaTelaProprietarios(View v){
+        Intent intent = new Intent(MainActivity.this, ListaProprietarioActiity.class);
+        startActivity(intent);
+    }
+    private Context getContext(){
+        return this;
     }
 }
