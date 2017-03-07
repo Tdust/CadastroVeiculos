@@ -24,7 +24,13 @@ public class ProprietarioActivity extends Activity {
 
             @Override
             public void onClick(View view) {
-                salvar();
+                EditText etnome = (EditText) findViewById(R.id.etNome);
+                EditText etendereco = (EditText) findViewById(R.id.etEndereco);
+                EditText ettelefone = (EditText) findViewById(R.id.etTelefone);
+                EditText etdata = (EditText) findViewById(R.id.etData);
+
+                Proprietario pessoa = new Proprietario(etnome.getText().toString(), etendereco.getText().toString(), ettelefone.getText().toString(), etdata.getText().toString());
+                pessoa.save();
                 Intent intent = new Intent(ProprietarioActivity.this, ListaProprietarioActivity.class);
                 startActivity(intent);
             }

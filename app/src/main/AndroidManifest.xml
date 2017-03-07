@@ -13,16 +13,16 @@
 
         <meta-data
             android:name="DATABASE"
-            android:value="eventos.db" />
+            android:value="proprietarios.db" />
         <meta-data
             android:name="VERSION"
-            android:value="1" />
+            android:value="3" />
         <meta-data
             android:name="QUERY_LOG"
             android:value="false" />
         <meta-data
             android:name="DOMAIN_PACKAGE_NAME"
-            android:value="br.edu.iff.pooa20162.peventos" />
+            android:value="pooa20162.iff.br.veiculos" />
 
         <activity android:name=".Activity.MainActivity">
             <intent-filter>
@@ -35,7 +35,11 @@
             android:name=".Activity.ListaProprietarioActivity"
             android:label="@string/title_activity_proprietario"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activity.ProprietarioActivity"></activity>
+        <activity android:name=".Activity.ProprietarioActivity"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

@@ -22,7 +22,7 @@ public class ProprietarioAdapter extends ArrayAdapter<Proprietario> {
     private final ArrayList<Proprietario> elementos;
 
     public ProprietarioAdapter(Context context, ArrayList<Proprietario> elementos) {
-        super(context, R.layout.linhaProprietario, elementos);
+        super(context, R.layout.linhaproprietario, elementos);
         this.context = context;
         this.elementos = elementos;
     }
@@ -31,7 +31,7 @@ public class ProprietarioAdapter extends ArrayAdapter<Proprietario> {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View rowView = inflater.inflate(R.layout.linhaProprietario, parent, false);
+        View rowView = inflater.inflate(R.layout.linhaproprietario, parent, false);
         TextView nome = (TextView) rowView.findViewById(R.id.pNome);
         TextView endereco = (TextView) rowView.findViewById(R.id.pEndereco);
         TextView telefone = (TextView) rowView.findViewById(R.id.pTelefone);
