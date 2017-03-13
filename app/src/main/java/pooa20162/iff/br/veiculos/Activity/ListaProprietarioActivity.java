@@ -46,10 +46,10 @@ public class ListaProprietarioActivity extends AppCompatActivity {
 
         ListView lista = (ListView) findViewById(R.id.lvProprietario);
 
-        final ArrayList<Proprietario> pizzas = (ArrayList<Proprietario>)
+        final ArrayList<Proprietario> prop = (ArrayList<Proprietario>)
                 Proprietario.listAll(Proprietario.class);
 
-        ArrayAdapter adapter = new ProprietarioAdapter(this, pizzas);
+        ArrayAdapter adapter = new ProprietarioAdapter(this, prop);
         lista.setAdapter(adapter);
 
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -57,8 +57,8 @@ public class ListaProprietarioActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(ListaProprietarioActivity.this, ProprietarioActivity.class);
 
-                intent.putExtra("nome", pizzas.get(i).getNome());
-                intent.putExtra("email", pizzas.get(i).getEndereco());
+                intent.putExtra("nome", prop.get(i).getNome());
+                intent.putExtra("email", prop.get(i).getEndereco());
 
                 startActivity(intent);
 
