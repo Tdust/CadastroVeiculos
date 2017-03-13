@@ -40,11 +40,15 @@ public class ListaProprietarioActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ListaProprietarioActivity.this, ProprietarioActivity.class);
-                intent.putExtra("id",0);
+                intent.putExtra("id", 0);
                 startActivity(intent);
             }
         });
+    }
 
+    protected void onResume()
+    {
+        super.onResume();
         ListView lista = (ListView) findViewById(R.id.lvProprietario);
 
         final ArrayList<Proprietario> prop = (ArrayList<Proprietario>)
@@ -57,7 +61,7 @@ public class ListaProprietarioActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(ListaProprietarioActivity.this, ProprietarioActivity.class);
-                intent.putExtra("id",prop.get(i).getId().intValue());
+                intent.putExtra("id", prop.get(i).getId().intValue());
                 intent.putExtra("nome", prop.get(i).getNome());
                 intent.putExtra("endereco", prop.get(i).getEndereco());
                 intent.putExtra("telefone", prop.get(i).getTelefone());
@@ -67,44 +71,5 @@ public class ListaProprietarioActivity extends AppCompatActivity {
 
             }
         });
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
-    }
-
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    public Action getIndexApiAction() {
-        Thing object = new Thing.Builder()
-                .setName("ListaProprietario Page") // TODO: Define a title for the content shown.
-                // TODO: Make sure this auto-generated URL is correct.
-                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
-                .build();
-        return new Action.Builder(Action.TYPE_VIEW)
-                .setObject(object)
-                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
-                .build();
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        AppIndex.AppIndexApi.start(client, getIndexApiAction());
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        AppIndex.AppIndexApi.end(client, getIndexApiAction());
-        client.disconnect();
     }
 }
