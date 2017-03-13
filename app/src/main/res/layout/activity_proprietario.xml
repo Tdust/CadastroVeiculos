@@ -105,7 +105,7 @@
             android:layout_width="179dp"
             android:layout_height="match_parent"
             android:id="@+id/btSalvar"
-            android:visibility="invisible" />
+            android:visibility="visible" />
         <Button
             android:text="Criar"
             android:layout_width="match_parent"

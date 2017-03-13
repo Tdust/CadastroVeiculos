@@ -40,6 +40,7 @@ public class ListaProprietarioActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ListaProprietarioActivity.this, ProprietarioActivity.class);
+                intent.putExtra("id",0);
                 startActivity(intent);
             }
         });
@@ -56,9 +57,11 @@ public class ListaProprietarioActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(ListaProprietarioActivity.this, ProprietarioActivity.class);
-
+                intent.putExtra("id",prop.get(i).getId().intValue());
                 intent.putExtra("nome", prop.get(i).getNome());
-                intent.putExtra("email", prop.get(i).getEndereco());
+                intent.putExtra("endereco", prop.get(i).getEndereco());
+                intent.putExtra("telefone", prop.get(i).getTelefone());
+                intent.putExtra("data", prop.get(i).getData());
 
                 startActivity(intent);
 
