@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_lista_proprietarios"
+    android:id="@+id/activity_veiculo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="pooa20162.iff.br.veiculos.Activity.ProprietarioActivity"
-    android:weightSum="1"
+    tools:context="pooa20162.iff.br.veiculos.Activity.VeiculoActivity"
     android:orientation="vertical">
 
     <LinearLayout
@@ -18,10 +17,10 @@
         android:layout_height="41dp">
 
         <TextView
-            android:text="Nome"
+            android:text="Placa"
             android:layout_width="99dp"
             android:layout_height="wrap_content"
-            android:id="@+id/tvNome" />
+            android:id="@+id/tvPlaca" />
 
         <EditText
             android:layout_width="match_parent"
@@ -38,10 +37,10 @@
         android:layout_height="41dp">
 
         <TextView
-            android:text="Endereço"
+            android:text="Modelo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tvEnderecoo"
+            android:id="@+id/tvModelo"
             android:layout_weight="1" />
 
         <EditText
@@ -59,10 +58,10 @@
         android:layout_height="41dp">
 
         <TextView
-            android:text="Telefone"
+            android:text="Ano"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tvTelefone"
+            android:id="@+id/tvAno"
             android:layout_weight="1" />
 
         <EditText
@@ -80,19 +79,18 @@
         android:layout_height="41dp">
 
         <TextView
-            android:text="Data de nasc."
+            android:text="Proprietario"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvData"
-            android:layout_weight="0.49" />
+            android:layout_height="match_parent"
+            android:id="@+id/tvProprietario"
+            android:layout_weight="0.48" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/etData"
-            android:layout_weight="1.49" />
+        <Spinner
+            android:layout_width="271dp"
+            android:layout_height="match_parent"
+            android:id="@+id/spinnerProp"
+            android:layout_weight="0.47" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -104,13 +102,13 @@
             android:text="Salvar"
             android:layout_width="179dp"
             android:layout_height="match_parent"
-            android:id="@+id/btSalvarProp"
+            android:id="@+id/btSalvarVeiculo"
             android:visibility="visible" />
         <Button
             android:text="Criar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/btCriarProp"
+            android:id="@+id/btCriarVeiculo"
             android:visibility="visible" />
     </LinearLayout>
 

@@ -25,8 +25,8 @@ public class ProprietarioActivity extends Activity {
         final EditText ettelefone = (EditText) findViewById(R.id.etTelefone);
         final EditText etdata = (EditText) findViewById(R.id.etData);
 
-        btCriar = (Button) findViewById(R.id.btCriar);
-        btSalvar = (Button) findViewById(R.id.btSalvar);
+        btCriar = (Button) findViewById(R.id.btCriarProp);
+        btSalvar = (Button) findViewById(R.id.btSalvarProp);
 
         String nome     = (String) intent.getSerializableExtra("nome");
         String endereco    = (String) intent.getSerializableExtra("endereco");

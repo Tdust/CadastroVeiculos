@@ -43,9 +43,10 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".ListaVeiculoActivity"
+            android:name=".Activity.ListaVeiculoActivity"
             android:label="@string/title_activity_lista_veiculo"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.VeiculoActivity"></activity>
     </application>
 
 </manifest>
