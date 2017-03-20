@@ -34,10 +34,11 @@ public class VeiculoAdapter extends ArrayAdapter<Veiculo> {
         TextView nome = (TextView) rowView.findViewById(R.id.vPlaca);
         TextView endereco = (TextView) rowView.findViewById(R.id.vModelo);
         TextView telefone = (TextView) rowView.findViewById(R.id.vAno);
-        TextView data = (TextView) rowView.findViewById(R.id.vProp);
+        TextView prop = (TextView) rowView.findViewById(R.id.vProp);
         nome.setText(carros.get(position).getPlaca());
         endereco.setText(carros.get(position).getModelo());
         telefone.setText(carros.get(position).getAno());
+        prop.setText(carros.get(position).getDono().getNome());
         return rowView;
     }
 }

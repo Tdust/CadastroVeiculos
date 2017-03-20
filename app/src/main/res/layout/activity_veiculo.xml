@@ -9,7 +9,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="pooa20162.iff.br.veiculos.Activity.VeiculoActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="1">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -76,20 +77,21 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="41dp">
+        android:layout_height="41dp"
+        android:layout_weight="0.03"
+        android:weightSum="1">
 
         <TextView
             android:text="Proprietario"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="34dp"
             android:id="@+id/tvProprietario"
             android:layout_weight="0.48" />
 
         <Spinner
-            android:layout_width="271dp"
+            android:layout_width="253dp"
             android:layout_height="match_parent"
-            android:id="@+id/spinnerProp"
-            android:layout_weight="0.47" />
+            android:id="@+id/spinnerProp" />
 
     </LinearLayout>
 

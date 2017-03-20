@@ -1,20 +1,26 @@
 package pooa20162.iff.br.veiculos.Model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.orm.SugarRecord;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Wanderson on 06/03/17.
  */
 
-public class Proprietario extends SugarRecord
-{
+public class Proprietario extends SugarRecord implements Parcelable {
     String nome = "";
     String endereco = "";
     String telefone = "";
     String data = "";
-    ArrayList<Veiculo> garagem;
+
+    List<Veiculo> getVeiculos() {
+        return Veiculo.find(Veiculo.class, "Proprietário = ?", new String(getId().toString()));
+    }
 
     public Proprietario() {
     }
@@ -58,11 +64,40 @@ public class Proprietario extends SugarRecord
         this.data = data;
     }
 
-    public ArrayList<Veiculo> getGaragem() {
-        return garagem;
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
-    public void setGaragem(ArrayList<Veiculo> garagem) {
-        this.garagem = garagem;
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(nome);
+        parcel.writeString(endereco);
+        parcel.writeString(telefone);
+        parcel.writeString(data);
+    }
+
+    protected Proprietario(Parcel in) {
+        nome = in.readString();
+        endereco = in.readString();
+        telefone = in.readString();
+        data = in.readString();
+    }
+
+    public static final Creator<Proprietario>
+            CREATOR = new Creator<Proprietario>() {
+        @Override
+        public Proprietario createFromParcel(Parcel in) {
+            return new Proprietario(in);
+        }
+
+        @Override
+        public Proprietario[] newArray(int size) {
+            return new Proprietario[size];
+        }
+    };
+
+    public String toString (){
+        return nome;
     }
 }
