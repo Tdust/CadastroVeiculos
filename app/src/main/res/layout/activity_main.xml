@@ -33,5 +33,6 @@
         android:layout_below="@+id/btProp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="96dp"
-        android:id="@+id/btVeiculo" />
+        android:id="@+id/btVeiculo"
+        android:onClick="chamaTelaVeiculos"/>
 </RelativeLayout>

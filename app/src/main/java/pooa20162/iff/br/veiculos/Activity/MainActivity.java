@@ -19,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, ListaProprietarioActivity.class);
         startActivity(intent);
     }
+    public void chamaTelaVeiculos(View v){
+        Intent intent = new Intent(MainActivity.this, ListaVeiculoActivity.class);
+        startActivity(intent);
+    }
     private Context getContext(){
         return this;
     }

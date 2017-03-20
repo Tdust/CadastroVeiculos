@@ -61,6 +61,7 @@ public class ProprietarioActivity extends Activity {
                 pessoa.save();
                 Intent intent = new Intent(ProprietarioActivity.this, ListaProprietarioActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 

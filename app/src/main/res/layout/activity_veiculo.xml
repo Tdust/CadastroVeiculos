@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/etNome"
+            android:id="@+id/etPlaca"
             android:layout_weight="0.23" />
     </LinearLayout>
 
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/etEndereco"
+            android:id="@+id/etModelo"
             android:layout_weight="1" />
     </LinearLayout>
 
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/etTelefone"
+            android:id="@+id/etAno"
             android:layout_weight="1" />
     </LinearLayout>
 
